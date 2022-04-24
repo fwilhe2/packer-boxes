@@ -78,7 +78,7 @@
       },
       {
         "type": "vagrant-cloud",
-        "box_tag": "geerlingguy/ubuntu2204",
+        "box_tag": "fwilhe/ubuntu-2204",
         "version": "{{user `version`}}"
       }
     ]
