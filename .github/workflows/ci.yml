@@ -1,0 +1,14 @@
+name: CI
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and Publish
+      run: |
+        packer build -var 'version=0.1.0' box-config.json
+      working-directory: ubuntu2204
